@@ -1,0 +1,193 @@
+@media screen and (max-width: 700px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    table td::before {
+        /*
+* aria-label has no advantage, it won't be read inside a table
+content: attr(aria-label);
+*/
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+.giohang {
+    margin-top: 70px
+}
+
+.title-gia {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.img-sm {
+    width: 150px;
+    height: 150px
+}
+
+.itemside .info {
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.table-shopping-cart .price-wrap {
+    line-height: 1.2
+}
+
+.table-shopping-cart .price {
+    font-weight: bold;
+    margin-right: 5px;
+    display: block
+}
+
+.title-ten {
+    text-decoration: none !important;
+    margin-bottom: 30px;
+    color: #5a7b68;
+}
+
+.itemside {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.title-gh {
+    color: #5a7b68;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-left: 10px;
+}
+
+.dlist-align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+[class*="dlist-"] {
+    margin-bottom: 5px;
+}
+
+.coupon {
+    border-radius: 1px
+}
+
+.price {
+    font-weight: 700;
+    color: #5a7b68;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.totals_price {
+    color: #5a7b68;
+    font-weight: 700;
+}
+
+.quantity-sl {
+    margin-top: 20px;
+}
+
+.quantity-left-minus {
+    border: 1px solid rgb(140, 143, 141);
+    max-width: 40px;
+}
+
+.quantity-left-minus:hover {
+    color: #ffffff;
+    background-color: rgb(248, 138, 20);
+    border-color: #f8f9fa;
+    transition: 0.6s;
+}
+
+.quantity-right-plus {
+    border: 1px solid rgb(140, 143, 141);
+    max-width: 40px;
+}
+
+.quantity-right-plus:hover {
+    color: #ffffff;
+    background-color: rgb(90, 123, 104);
+    border-color: #f8f9fa;
+    transition: 0.6s;
+}
+
+.quantity-left-minus1 {
+    border: 1px solid rgb(140, 143, 141);
+    max-width: 40px;
+}
+
+.quantity-left-minus1:hover {
+    color: #ffffff;
+    background-color: red;
+    border-color: #f8f9fa;
+    transition: 0.6s;
+}
+
+.btn-tt {
+    color: #5a7b68;
+    border: 1px solid #5a7b68;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 200px;
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px 30px;
+}
+
+.btn-tt:hover {
+    color: #ffff;
+    background-color: #5a7b68;
+    transition: 0.6s;
+}
+
+.btn-ttmh {
+    color: #5a7b68;
+    border: 1px solid #5a7b68;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 200px;
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px 30px;
+}
+
+.fa-gh {}

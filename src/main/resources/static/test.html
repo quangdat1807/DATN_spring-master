@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>JWT Spring Security Demo</title>
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+         integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+   <style type="text/css">
+      .text-hidden {
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+      }
+
+      .text-shown {
+         word-wrap: break-word;
+      }
+   </style>
+</head>
+<body>
+<div class="container">
+   <h1>JWT Spring Security Demo</h1>
+
+   <div class="alert alert-danger" id="notLoggedIn">Not logged in!</div>
+
+   <div class="alert alert-info text-hidden" id="loggedIn"></div>
+
+   <div class="row">
+      <div class="col-md-6">
+         <div class="panel panel-default" id="login">
+            <div class="panel-heading">
+               <h3 class="panel-title">Login</h3>
+            </div>
+            <div class="panel-body">
+               <form id="loginForm">
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username"
+                            required name="username">
+                  </div>
+                  <div class="form-group">
+                     <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="password" required name="password">
+                  </div>
+                  <div class="well">
+                     Try one of the following logins
+                     <ul>
+                        <li>admin & admin</li>
+                        <li>user & password</li>
+                        <li>disabled & password</li>
+                     </ul>
+                  </div>
+                  <button type="submit" class="btn btn-default">login</button>
+               </form>
+            </div>
+         </div>
+
+         <div id="userInfo">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Authenticated user</h3>
+               </div>
+               <div class="panel-body">
+                  <div id="userInfoBody"></div>
+                  <button type="button" class="btn btn-default" id="logoutButton" style="z-index: 1000;">logout</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-6">
+         <div class="btn-group" role="group" aria-label="..." style="margin-bottom: 16px;">
+            <button type="button" class="btn btn-default" id="exampleServiceBtn">call example service</button>
+            <button type="button" class="btn btn-default" id="adminServiceBtn">call admin protected service</button>
+             <button type="button" class="btn btn-default" id="lgout">logout</button>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h3 class="panel-title">Response:</h3>
+            </div>
+            <div class="panel-body">
+               <pre id="response"></pre>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="loginErrorModal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+               aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Login unsuccessful</h4>
+         </div>
+         <div class="modal-body"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+<script>
+   $(function () {
+   // VARIABLES =============================================================
+   var TOKEN_KEY = "jwtToken"
+   var REFRESF_TOKEN_KEY = "refreshToken"
+   var $notLoggedIn = $("#notLoggedIn");
+   var $loggedIn = $("#loggedIn").hide();
+   var $response = $("#response");
+   var $login = $("#login");
+   var $userInfo = $("#userInfo").hide();
+
+   // FUNCTIONS =============================================================
+   function getJwtToken() {
+      return localStorage.getItem(TOKEN_KEY);
+   }
+
+   function getRefreshToken() {
+      return localStorage.getItem(REFRESF_TOKEN_KEY);
+   }
+
+   function setJwtToken(token) {
+      localStorage.setItem(TOKEN_KEY, token);
+   }
+
+   function setRefreshToken(refreshToken) {
+      localStorage.setItem(REFRESF_TOKEN_KEY, refreshToken);
+   }
+
+   function removeJwtToken() {
+      localStorage.removeItem(TOKEN_KEY);
+   }
+
+   function removeRefreshToken() {
+      localStorage.removeItem(REFRESF_TOKEN_KEY);
+   }
+
+   function doLogin(loginData) {
+	console.log(loginData);
+      $.ajax({
+         url: "/api/auth/signin",
+         type: "POST",
+         data: JSON.stringify(loginData),
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         success: function (data, textStatus, jqXHR) {
+            setJwtToken(data.accessToken);
+            setRefreshToken(data.refreshToken);
+            console.log(data);
+            $login.hide();
+            $notLoggedIn.hide();
+            showTokenInformation()
+            var $userInfoBody = $userInfo.find("#userInfoBody");
+
+            $userInfoBody.append($("<div>").text("Username: " + data.username));
+            
+            $userInfoBody.append($("<div>").text("Email: " + data.email));
+
+            var $authorityList = $("<ul>");
+            data.authorities.forEach(function (authorityItem) {
+               $authorityList.append($("<li>").text(authorityItem.name));
+            });
+            var $authorities = $("<div>").text("Authorities:");
+            $authorities.append($authorityList);
+
+            $userInfoBody.append($authorities);
+            $userInfo.show();
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            if (jqXHR.status === 401) {
+               $('#loginErrorModal')
+                  .modal("show")
+                  .find(".modal-body")
+                  .empty()
+                  .html("<p>" + jqXHR.responseJSON.message + "</p>");
+            } else {
+               throw new Error("an unexpected error occured: " + errorThrown);
+            }
+         }
+      });
+   }
+
+   function doLogout() {
+      removeJwtToken();
+      
+      $login.show();
+      $userInfo
+         .hide()
+         .find("#userInfoBody").empty();
+      $loggedIn
+         .hide()
+         .attr("title", "")
+         .empty();
+      $notLoggedIn.show();
+   }
+
+   function createAuthorizationTokenHeader() {
+      var token = getJwtToken();
+      if (token) {
+         return {"Authorization": "Bearer " + token};
+      } else {
+         return {};
+      }
+   }
+
+   function showUserInformation() {
+      $.ajax({
+         url: "/api/test/admin",
+         type: "GET",
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         headers: {
+     	    "Authorization": "Bearer " + getJwtToken()
+     	  },
+         success: function (data, textStatus, jqXHR) {
+            var $userInfoBody = $userInfo.find("#userInfoBody");
+
+            $userInfoBody.append($("<div>").text("Username: " + data.username));
+            
+            $userInfoBody.append($("<div>").text("Email: " + data.email));
+
+            var $authorityList = $("<ul>");
+            data.authorities.forEach(function (authorityItem) {
+               $authorityList.append($("<li>").text(authorityItem.name));
+            });
+            var $authorities = $("<div>").text("Authorities:");
+            $authorities.append($authorityList);
+
+            $userInfoBody.append($authorities);
+            $userInfo.show();
+         }
+      });
+   }
+
+   function showTokenInformation() {
+      $loggedIn
+         .text("Token: " + getJwtToken())
+         .attr("title", "Token: " + getJwtToken())
+         .show();
+   }
+
+   function showResponse(statusCode, message) {
+      $response
+         .empty()
+         .text(
+            "status code: "
+            + statusCode + "\n-------------------------\n"
+            + (typeof message === "object" ? JSON.stringify(message) : message)
+         );
+   }
+
+   // REGISTER EVENT LISTENERS =============================================================
+   $("#loginForm").submit(function (event) {
+      event.preventDefault();
+
+      var $form = $(this);
+      var formData = {
+         username: $form.find('input[name="username"]').val(),
+         password: $form.find('input[name="password"]').val()
+      };
+
+      doLogin(formData);
+   });
+
+  
+
+   function refreshToken(d) {
+      $.ajax({
+         url: "/api/auth/refreshtoken",
+         type: "POST",
+         data: JSON.stringify( {refreshToken : getRefreshToken()} ),
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         success: function (data, textStatus, jqXHR) {
+            console.log('access : '+data.accessToken);
+            console.log('refresh: '+data.refreshToken);
+            
+            setJwtToken(data.accessToken);
+            
+            setRefreshToken(data.refreshToken);
+           
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+           
+         }
+      });
+       
+   }
+
+   
+   
+
+   $("#lgout").click(doLogout);
+   
+   headerParams = {'Authorization':'basesic eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb24iLCJpYXQiOjE2MzMwNDgwMzYsImV4cCI6MTYzMzEzNDQzNn0.JtKfJG_FJdW4aWIcvwNYhimZ9EtHgUWLaNDO6KMvQytj_imk2DdIvmJt11xEVUAnjqiAAHMe-QQd_6DJJxTEjQ'};
+   console.log("hedear: "+getJwtToken());
+
+   $("#exampleServiceBtn").click(function () {
+	   
+      $.ajax({
+         url: "/api/test/user",
+         type: "GET",
+         contentType: "application/json; charset=utf-8",
+         beforeSend: function (xhr) {
+        	    xhr.setRequestHeader('Authorization', 'Bearer ' + getJwtToken());
+        	},
+         dataType: "json",
+         success: function (data, textStatus, jqXHR) {
+             console.log(data);
+            showResponse(jqXHR.status, JSON.stringify(data));
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            refreshToken();
+            showResponse(jqXHR.status);
+           
+   
+         }
+      });
+   });
+
+   $("#adminServiceBtn").click(function () {
+      $.ajax({
+         url: "/api/test/mod",
+         type: "GET",
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         headers: createAuthorizationTokenHeader(),
+         success: function (data, textStatus, jqXHR) {
+            showResponse(jqXHR.status, data);
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            showResponse(jqXHR.status, jqXHR.responseJSON.message)
+         }
+      });
+   });
+
+   $loggedIn.click(function () {
+      $loggedIn
+         .toggleClass("text-hidden")
+         .toggleClass("text-shown");
+   });
+
+   // INITIAL CALLS =============================================================
+   if (getJwtToken()) {
+      $login.hide();
+      $notLoggedIn.hide();
+      showTokenInformation();
+     
+   }
+});
+</script>
+</body>
+</html>

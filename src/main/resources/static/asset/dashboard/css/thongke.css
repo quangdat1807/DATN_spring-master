@@ -1,0 +1,27 @@
+.tkngay {
+	padding-top: 20px;
+	height: 500px;
+}
+.chonngay {
+	width: 150px;
+}
+
+.reportx {
+	padding-bottom: 20px;
+}
+
+.chartRender {
+	background-color: #fff;
+}
+
+.tkthang {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid;
+}
+
+#year {
+	width: 90px;
+	height: 50px;
+	border-radius: 3px;
+}

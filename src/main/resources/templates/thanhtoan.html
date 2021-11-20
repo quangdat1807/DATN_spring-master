@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="/asset/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/asset/css/check-out.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+
+
+    <title>Đức Phát - Thanh toán đơn hàng</title>
+</head>
+
+<body>
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="/asset/img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+
+                <li><a href="./giohang.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./product.html">Sản phẩm</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Đèn chiếu sáng</a></li>
+                        <li><a href="./shoping-cart.html">Công tắc ổ cắm</a></li>
+                        <li><a href="./checkout.html">CB-Thiết bị đóng cắt</a></li>
+                        <li><a href="./blog-details.html">Đèn trang trí</a></li>
+                        <li><a href="./blog-details.html">Ống luồn dây điện</a></li>
+                        <li><a href="./blog-details.html">Dây cáp điện</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Khuyến mãi</a></li>
+                <li><a href="./tintuc.html">Tin tức</a></li>
+                <li><a href="./contact.html">Liên hệ</a></li>
+                <li><a href="./blog-details.html">Lắp đặt</a></li>
+                <li><a href="./blog-details.html">Giới thiệu</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i>Ducphatelectric113@gmail.com</li>
+                <li>Thắp sáng ước mơ</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> Ducphatelectric113@gmail.com</li>
+                                <li>Thắp sáng ước mơ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" style="text-align: center;">
+                    <div class="header__logo">
+                        <a href="./index.html"><img class="imglogo" src="img/lg.png" alt="" width=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search" style="padding-top: 20px">
+                        <div class="hero__search__form">
+                            <form action="#">
+
+
+                                <input type="text" placeholder="What do yo u need?">
+                                <button type="submit" class="site-btn">SEARCH</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>0987.654.321</h5>
+                                <span>Hỗ trợ 24/7 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <header class="header-bottom sticky-top">
+        <div class="container">
+
+            <nav class="header__menu">
+                <ul>
+                    <li class="active"><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./product.html">Sản phẩm</a>
+                        <ul class="header__menu__dropdown">
+                            <li><a href="./shop-details.html">Đèn chiếu sáng</a></li>
+                            <li><a href="./shoping-cart.html">Công tắc ổ cắm</a></li>
+                            <li><a href="./checkout.html">CB-Thiết bị đóng cắt</a></li>
+                            <li><a href="./blog-details.html">Đèn trang trí</a></li>
+                            <li><a href="./blog-details.html">Ống luồn dây điện</a></li>
+                            <li><a href="./blog-details.html">Dây cáp điện</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./blog.html">Khuyến mãi</a></li>
+                    <li><a href="./tintuc.html">Tin tức</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                    <li><a href="./blog-details.html">Lắp đặt</a></li>
+                    <li><a href="./blog-details.html">Giới thiệu</a></li>
+                    <li style="float: right;">
+
+                        <a href="./giohang.html" class="header__cart"><i class="fa fa-shopping-bag"></i> <span>[[${quantity}]]</span></a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+    <!-- end header -->
+    <th:block th:if="${isLogin == 1}">
+<section>
+    <div class="container-xl ">
+        <form class="needs-validation" id="checkoutForm">
+            <div class="row">           
+                <div class="col-md-7 order-md-1">
+                    <a href="./index.html" class="ducphat">Đức Phát</a>
+                    <div class="mb-3">
+                        <label class="thongtin">Thông tin nhận hàng</label>
+                        
+                    </div>
+                        <div class="mb-3">
+                            <label for="username"><i class="fas fa-envelope"></i>Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="email" th:name="email" th:value=" ${email}" disabled/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email"><i class="fas fa-file-signature"></i>Họ và tên</label>
+                            <input type="text" class="form-control" id="username" th:name="name" th:value=" ${name}"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address"><i class="fas fa-phone-alt"></i>Số điện thoại</label>
+                            <input type="text" class="form-control" id="address" th:name="phoneNumber" th:value=" ${phoneNumber}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="address"><i class="fas fa-map-marked"></i>Address </label>
+                            <input type="text" class="form-control" id="address2" th:name="address" th:value=" ${address}" required />
+                        </div>
+                    
+                            <div class="mb-3">
+                                <label for="firstName"><i class="fas fa-city"></i>Tỉnh / Thành Phố</label>
+                                <select class="custom-select" name="ls_province" id="province"></select>
+                                <label class="province_error" style="color:red">
+                                     Vui lòng chọn Tỉnh / Thành phố
+                                 </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName"><i class="fas fa-university"></i>Quận / Huyện</label>
+                                <select class="custom-select" name="ls_district" id="district"></select>
+                                <label class="district_error" style="color:red">
+                                    Vui lòng chọ Quận / Huyện
+                                 </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName"><i class="fas fa-university"></i>Phường / Xã</label>
+                                <select class="custom-select" name="ls_ward" id="ward"></select>
+                                <label class="ward_error" style="color:red">
+                                     Vui lòng chọn Phường Xã
+                                 </label>
+                            </div>
+                        
+                        <div class="mb-3">
+                            <label for="address"><i class="fas fa-sticky-note"></i>Ghi chú </label>
+                            <textarea name="description" th:name="ghichu" class="form-control" placeholder="ghi chú" id="note"></textarea>
+                   
+                    <hr class="mb-12" />
+                    <p class="baomat" data-toggle="modal" data-target=".bd-example-modal-lg">Chính sách bảo mật</p>
+                    </div>
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Chính sách bảo mật</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                                </div>
+                                <div class="modal-content">
+                                    <p class="baomatcs">CHÍNH SÁCH BẢO MẬT</p>
+                                    <p class="baomatcs">Cám ơn quý khách đã quan tâm và truy cập vào website. Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của Quý khách. Chính sách bảo mật sẽ giải thích cách chúng tôi tiếp nhận, sử dụng và (trong
+                                        trường hợp nào đó) tiết lộ thông tin cá nhân của Quý khách. Bảo vệ dữ liệu cá nhân và gây dựng được niềm tin cho quý khách là vấn đề rất quan trọng với chúng tôi. Vì vậy, chúng tôi sẽ dùng tên và các thông tin khác
+                                        liên quan đến quý khách tuân thủ theo nội dung của Chính sách bảo mật. Chúng tôi chỉ thu thập những thông tin cần thiết liên quan đến giao dịch mua bán.</p>
+                                    <p class="baomatcs">Chúng tôi sẽ giữ thông tin của khách hàng trong thời gian luật pháp quy định hoặc cho mục đích nào đó. Quý khách có thể truy cập vào website và trình duyệt mà không cần phải cung cấp chi tiết cá nhân. Lúc đó, Quý khách
+                                        đang ẩn danh và chúng tôi không thể biết bạn là ai nếu Quý khách không đăng nhập vào tài khoản của mình.
+                                    </p>
+                                    <p class="baomatcs">1. Thu thập thông tin cá nhân </p>
+                                    <p class="baomatcs">- Chúng tôi thu thập, lưu trữ và xử lý thông tin của bạn cho quá trình mua hàng và cho những thông báo sau này liên quan đến đơn hàng, và để cung cấp dịch vụ, bao gồm một số thông tin cá nhân: danh hiệu, tên, giới tính,
+                                        ngày sinh, email, địa chỉ, địa chỉ giao hàng, số điện thoại, fax, chi tiết thanh toán, chi tiết thanh toán bằng thẻ hoặc chi tiết tài khoản ngân hàng.</p>
+                                    <p class="baomatcs">- Chúng tôi sẽ dùng thông tin quý khách đã cung cấp để xử lý đơn đặt hàng, cung cấp các dịch vụ và thông tin yêu cầu thông qua website và theo yêu cầu của bạn.</p>
+                                    <p class="baomatcs">- Hơn nữa, chúng tôi sẽ sử dụng các thông tin đó để quản lý tài khoản của bạn; xác minh và thực hiện giao dịch trực tuyến, nhận diện khách vào web, nghiên cứu nhân khẩu học, gửi thông tin bao gồm thông tin sản phẩm và dịch
+                                        vụ. Nếu quý khách không muốn nhận bất cứ thông tin tiếp thị của chúng tôi thì có thể từ chối bất cứ lúc nào.
+                                    </p>
+                                    <p class="baomatcs">- Chúng tôi có thể chuyển tên và địa chỉ cho bên thứ ba để họ giao hàng cho bạn (ví dụ cho bên chuyển phát nhanh hoặc nhà cung cấp).</p>
+                                    <p class="baomatcs">- Chi tiết đơn đặt hàng của bạn được chúng tôi lưu giữ nhưng vì lí do bảo mật nên chúng tôi không công khai trực tiếp được. Tuy nhiên, quý khách có thể tiếp cận thông tin bằng cách đăng nhập tài khoản trên web. Tại đây,
+                                        quý khách sẽ thấy chi tiết đơn đặt hàng của mình, những sản phẩm đã nhận và những sản phẩm đã gửi và chi tiết email, ngân hàng và bản tin mà bạn đặt theo dõi dài hạn.</p>
+                                    <p class="baomatcs">- Quý khách cam kết bảo mật dữ liệu cá nhân và không được phép tiết lộ cho bên thứ ba. Chúng tôi không chịu bất kỳ trách nhiệm nào cho việc dùng sai mật khẩu nếu đây không phải lỗi của chúng tôi. - Chúng tôi có thể dùng
+                                        thông tin cá nhân của bạn để nghiên cứu thị trường. mọi thông tin chi tiết sẽ được ẩn và chỉ được dùng để thống kê. Quý khách có thể từ chối không tham gia bất cứ lúc nào.</p>
+                                    <p class="baomatcs">2. Bảo mật </p>
+                                    <p class="baomatcs">- Chúng tôi có biện pháp thích hợp về kỹ thuật và an ninh để ngăn chặn truy cập trái phép hoặc trái pháp luật hoặc mất mát hoặc tiêu hủy hoặc thiệt hại cho thông tin của bạn.</p>
+                                    <p class="baomatcs">- Chúng tôi khuyên quý khách không nên đưa thông tin chi tiết về việc thanh toán với bất kỳ ai bằng e-mail, chúng tôi không chịu trách nhiệm về những mất mát quý khách có thể gánh chịu trong việc trao đổi thông tin của
+                                        quý khách qua internet hoặc email.</p>
+                                    <p class="baomatcs">- Quý khách tuyệt đối không sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Nghiêm cấm việc phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào
+                                        nhằm can thiệp, phá hoại hay xâm nhập vào dữ liệu của hệ thống website. Mọi vi phạm sẽ bị tước bỏ mọi quyền lợi cũng như sẽ bị truy tố trước pháp luật nếu cần thiết.</p>
+                                    <p class="baomatcs">- Mọi thông tin giao dịch sẽ được bảo mật nhưng trong trường hợp cơ quan pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan pháp luật. Các điều kiện, điều khoản và nội dung của trang
+                                        web này được điều chỉnh bởi luật pháp Việt Nam và tòa án Việt Nam có thẩm quyền xem xét.</p>
+                                    <p class="baomatcs">3. Quyền lợi khách hàng</p>
+                                    <p class="baomatcs">-Quý khách có quyền yêu cầu truy cập vào dữ liệu cá nhân của mình, có quyền yêu cầu chúng tôi sửa lại những sai sót trong dữ liệu của bạn mà không mất phí. Bất cứ lúc nào bạn cũng có quyền yêu cầu chúng tôi ngưng sử dụng
+                                        dữ liệu cá nhân của bạn cho mục đích tiếp thị.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="donhang">Đơn hàng của bạn</span>
+                    </h4>
+                    <ul class="list-group mb-3" th:each="cart : ${cart.chiTietGioHang}">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <img class="my-0 images" th:src="${cart.key.hinhanh}" alt="">
+                            </div>
+                            <div>
+                                <p class="product-item-name">[[${cart.key.tensanpham}]]</p>
+                            </div>
+                            <div>
+                                <h6 class="my-0">x[[${cart.value}]]</h6>
+                            </div>
+                            <span class="text-muted" th:with="sum=${cart.value * cart.key.gia}" th:text="${#numbers.formatDecimal(sum, 0, 'COMMA', 0, 'POINT')+'₫'}"></span>
+                        </li>
+                    </ul>
+                    <hr class="mb-4" />
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Mã giảm giá" />
+                        <div class="input-group-append">
+                            <button  class="apdung btn">Áp Dụng</button>
+                        </div>
+                    </div>
+                    <ul class="list-group mb-3 tongtien">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <span>Tổng cộng</span>
+                            <strong th:text="${#numbers.formatDecimal(total, 0, 'COMMA', 0, 'POINT')+'₫'}"></strong>
+                        </li>
+                    </ul>
+                    <hr class="mb-4" />
+                    <div class="mb-3">
+                        <a href="/cart" class="quayve"><i class="fas fa-angle-left"></i>Quay về giỏ hàng</a>
+                        <button class="dathang btn" id="btncheckout" type="submit">
+                ĐẶT HÀNG
+            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+</section>
+</th:block>
+
+<th:block th:if="${isLogin == 2}">
+    <section>
+        <div class="container-xl ">
+            <form class="needs-validation" id="checkoutByUserForm">
+                <div class="row">           
+                    <div class="col-md-7 order-md-1">
+                        <a href="./index.html" class="ducphat">Đức Phát</a>
+                        <div class="mb-3">
+                            <label class="thongtin">Thông tin nhận hàng</label>
+                            <a href="/login?cartStatus=0" class="dangnhap"><i class="fas fa-user-circle"></i>Đăng nhập</a>
+                        </div>
+                            <div class="mb-3">
+                                <label for="email"><i class="fas fa-envelope"></i>Email</label>
+                                
+                                    <input type="text" class="form-control" id="email" name="email"  />
+                                
+                            </div>
+                            <div class="mb-3">
+                                <label for="email"><i class="fas fa-file-signature"></i>Họ và tên</label>
+                                <input type="text" class="form-control" id="username" name="name"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address"><i class="fas fa-phone-alt"></i>Số điện thoại</label>
+                                <input type="text" class="form-control" id="address" name="phoneNumber" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="address"><i class="fas fa-map-marked"></i>Address </label>
+                                <input type="text" class="form-control" id="address2" name="address"  required />
+                            </div>
+                        
+                                <div class="mb-3">
+                                    <label for="firstName"><i class="fas fa-city"></i>Tỉnh / Thành Phố</label>
+                                    <select class="custom-select" name="ls_province" id="province"></select>
+                                    <label class="province_error" style="color:red">
+                                         Vui lòng chọn Tỉnh / Thành phố
+                                     </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastName"><i class="fas fa-university"></i>Quận / Huyện</label>
+                                    <select class="custom-select" name="ls_district" id="district"></select>
+                                    <label class="district_error" style="color:red">
+                                        Vui lòng chọ Quận / Huyện
+                                     </label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastName"><i class="fas fa-university"></i>Phường / Xã</label>
+                                    <select class="custom-select" name="ls_ward" id="ward"></select>
+                                    <label class="ward_error" style="color:red">
+                                         Vui lòng chọn Phường Xã
+                                     </label>
+                                </div>
+                            
+                            <div class="mb-3">
+                                <label for="address"><i class="fas fa-sticky-note"></i>Ghi chú </label>
+                                <textarea name="description" th:name="ghichu" class="form-control" placeholder="ghi chú" id="note"></textarea>
+                       
+                        <hr class="mb-12" />
+                        <p class="baomat" data-toggle="modal" data-target=".bd-example-modal-lg">Chính sách bảo mật</p>
+                        </div>
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Chính sách bảo mật</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                                    </div>
+                                    <div class="modal-content">
+                                        <p class="baomatcs">CHÍNH SÁCH BẢO MẬT</p>
+                                        <p class="baomatcs">Cám ơn quý khách đã quan tâm và truy cập vào website. Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của Quý khách. Chính sách bảo mật sẽ giải thích cách chúng tôi tiếp nhận, sử dụng và (trong
+                                            trường hợp nào đó) tiết lộ thông tin cá nhân của Quý khách. Bảo vệ dữ liệu cá nhân và gây dựng được niềm tin cho quý khách là vấn đề rất quan trọng với chúng tôi. Vì vậy, chúng tôi sẽ dùng tên và các thông tin khác
+                                            liên quan đến quý khách tuân thủ theo nội dung của Chính sách bảo mật. Chúng tôi chỉ thu thập những thông tin cần thiết liên quan đến giao dịch mua bán.</p>
+                                        <p class="baomatcs">Chúng tôi sẽ giữ thông tin của khách hàng trong thời gian luật pháp quy định hoặc cho mục đích nào đó. Quý khách có thể truy cập vào website và trình duyệt mà không cần phải cung cấp chi tiết cá nhân. Lúc đó, Quý khách
+                                            đang ẩn danh và chúng tôi không thể biết bạn là ai nếu Quý khách không đăng nhập vào tài khoản của mình.
+                                        </p>
+                                        <p class="baomatcs">1. Thu thập thông tin cá nhân </p>
+                                        <p class="baomatcs">- Chúng tôi thu thập, lưu trữ và xử lý thông tin của bạn cho quá trình mua hàng và cho những thông báo sau này liên quan đến đơn hàng, và để cung cấp dịch vụ, bao gồm một số thông tin cá nhân: danh hiệu, tên, giới tính,
+                                            ngày sinh, email, địa chỉ, địa chỉ giao hàng, số điện thoại, fax, chi tiết thanh toán, chi tiết thanh toán bằng thẻ hoặc chi tiết tài khoản ngân hàng.</p>
+                                        <p class="baomatcs">- Chúng tôi sẽ dùng thông tin quý khách đã cung cấp để xử lý đơn đặt hàng, cung cấp các dịch vụ và thông tin yêu cầu thông qua website và theo yêu cầu của bạn.</p>
+                                        <p class="baomatcs">- Hơn nữa, chúng tôi sẽ sử dụng các thông tin đó để quản lý tài khoản của bạn; xác minh và thực hiện giao dịch trực tuyến, nhận diện khách vào web, nghiên cứu nhân khẩu học, gửi thông tin bao gồm thông tin sản phẩm và dịch
+                                            vụ. Nếu quý khách không muốn nhận bất cứ thông tin tiếp thị của chúng tôi thì có thể từ chối bất cứ lúc nào.
+                                        </p>
+                                        <p class="baomatcs">- Chúng tôi có thể chuyển tên và địa chỉ cho bên thứ ba để họ giao hàng cho bạn (ví dụ cho bên chuyển phát nhanh hoặc nhà cung cấp).</p>
+                                        <p class="baomatcs">- Chi tiết đơn đặt hàng của bạn được chúng tôi lưu giữ nhưng vì lí do bảo mật nên chúng tôi không công khai trực tiếp được. Tuy nhiên, quý khách có thể tiếp cận thông tin bằng cách đăng nhập tài khoản trên web. Tại đây,
+                                            quý khách sẽ thấy chi tiết đơn đặt hàng của mình, những sản phẩm đã nhận và những sản phẩm đã gửi và chi tiết email, ngân hàng và bản tin mà bạn đặt theo dõi dài hạn.</p>
+                                        <p class="baomatcs">- Quý khách cam kết bảo mật dữ liệu cá nhân và không được phép tiết lộ cho bên thứ ba. Chúng tôi không chịu bất kỳ trách nhiệm nào cho việc dùng sai mật khẩu nếu đây không phải lỗi của chúng tôi. - Chúng tôi có thể dùng
+                                            thông tin cá nhân của bạn để nghiên cứu thị trường. mọi thông tin chi tiết sẽ được ẩn và chỉ được dùng để thống kê. Quý khách có thể từ chối không tham gia bất cứ lúc nào.</p>
+                                        <p class="baomatcs">2. Bảo mật </p>
+                                        <p class="baomatcs">- Chúng tôi có biện pháp thích hợp về kỹ thuật và an ninh để ngăn chặn truy cập trái phép hoặc trái pháp luật hoặc mất mát hoặc tiêu hủy hoặc thiệt hại cho thông tin của bạn.</p>
+                                        <p class="baomatcs">- Chúng tôi khuyên quý khách không nên đưa thông tin chi tiết về việc thanh toán với bất kỳ ai bằng e-mail, chúng tôi không chịu trách nhiệm về những mất mát quý khách có thể gánh chịu trong việc trao đổi thông tin của
+                                            quý khách qua internet hoặc email.</p>
+                                        <p class="baomatcs">- Quý khách tuyệt đối không sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Nghiêm cấm việc phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào
+                                            nhằm can thiệp, phá hoại hay xâm nhập vào dữ liệu của hệ thống website. Mọi vi phạm sẽ bị tước bỏ mọi quyền lợi cũng như sẽ bị truy tố trước pháp luật nếu cần thiết.</p>
+                                        <p class="baomatcs">- Mọi thông tin giao dịch sẽ được bảo mật nhưng trong trường hợp cơ quan pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan pháp luật. Các điều kiện, điều khoản và nội dung của trang
+                                            web này được điều chỉnh bởi luật pháp Việt Nam và tòa án Việt Nam có thẩm quyền xem xét.</p>
+                                        <p class="baomatcs">3. Quyền lợi khách hàng</p>
+                                        <p class="baomatcs">-Quý khách có quyền yêu cầu truy cập vào dữ liệu cá nhân của mình, có quyền yêu cầu chúng tôi sửa lại những sai sót trong dữ liệu của bạn mà không mất phí. Bất cứ lúc nào bạn cũng có quyền yêu cầu chúng tôi ngưng sử dụng
+                                            dữ liệu cá nhân của bạn cho mục đích tiếp thị.</p>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-2 mb-4">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="donhang">Đơn hàng của bạn</span>
+                        </h4>
+                        <ul class="list-group mb-3" th:each="cart : ${cart.chiTietGioHang}">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <img class="my-0 images" th:src="${cart.key.hinhanh}" alt="">
+                                </div>
+                                <div>
+                                    <p class="product-item-name">[[${cart.key.tensanpham}]]</p>
+                                </div>
+                                <div>
+                                    <h6 class="my-0">x[[${cart.value}]]</h6>
+                                </div>
+                                <span class="text-muted" th:with="sum=${cart.value * cart.key.gia}" th:text="${#numbers.formatDecimal(sum, 0, 'COMMA', 0, 'POINT')+'₫'}"></span>
+                            </li>
+                        </ul>
+                        <hr class="mb-4" />
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Mã giảm giá" />
+                            <div class="input-group-append">
+                                <button  class="apdung btn">Áp Dụng</button>
+                            </div>
+                        </div>
+                        <ul class="list-group mb-3 tongtien">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <span>Tổng cộng</span>
+                                <strong th:text="${#numbers.formatDecimal(total, 0, 'COMMA', 0, 'POINT')+'₫'}"></strong>
+                            </li>
+                        </ul>
+                        <hr class="mb-4" />
+                        <div class="mb-3">
+                            <a href="/cart" class="quayve"><i class="fas fa-angle-left"></i>Quay về giỏ hàng</a>
+                            <button class="dathang btn" id="btncheckout" type="submit">
+                    ĐẶT HÀNG
+                </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
+    </th:block>
+
+
+<!-- <div id="myModal" class="modal">
+   
+     <div class="modal-content">
+       <p>Chúng tôi đang xử đơn hàng vui lòng chờ trong giây lát...</p>
+       <div class="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+     </div>
+  </div> -->
+
+<!-- Footer Section Begin -->
+<footer class="footer spad" style="margin-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__about__logo">
+                        <a href="./index.html"><img src="img/lg.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Address: 60-49 Road 11378 New York</li>
+                        <li>Phone: +65 11.188.888</li>
+                        <li>Email: sondtpk01429@fpt.edu.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="footer__widget">
+                    <h6>Useful Links</h6>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">About Our Shop</a></li>
+                        <li><a href="#">Secure Shopping</a></li>
+                        <li><a href="#">Delivery infomation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Our Sitemap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Innovation</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="footer__widget">
+                    <h6>Join Our Newsletter Now</h6>
+                    <p>Get E-mail updates about our latest shop and special offers.</p>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your mail">
+                        <button type="submit" class="site-btn">Subscribe</button>
+                    </form>
+                    <div class="footer__widget__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer__copyright">
+                    <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template design by <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Team No Crack</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+
+
+<script src="/asset/js/jquery-3.3.1.min.js"></script>
+<script src="/asset/js/bootstrap.min.js"></script>
+<script src="/asset/js/jquery-ui.min.js"></script>
+<script src="/asset/js/jquery.slicknav.js"></script>
+<script src="/asset/js/mixitup.min.js"></script>
+<script src="/asset/js/owl.carousel.min.js"></script>
+<script src="/asset/js/main.js"></script>
+<script src="/asset/js/slideshow.js"></script>
+<script src="/asset/js/api/checkout.js"></script>
+
+
+ <!-- Validation -->
+ <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+<!-- viet nam local -->
+<script src="/asset/js/vietnamlocalselector/vietnamlocal.js"></script>
+<script src="/asset/js/vietnamlocalselector/vietnamlocalselector.js"></script>
+<script src="/asset/js/vietnamlocalselector/vietnamlocalselector.min.js"></script>
+<script src="/asset/js/vietnamlocalselector/vietnamlocalselector.nonoop.js"></script>
+<script>
+    $('.province_error').hide(); 
+$('.district_error').hide();
+$('.ward_error').hide();
+    var localpicker = new LocalPicker({
+    province: "ls_province",
+    district: "ls_district",
+    ward: "ls_ward"
+    });
+
+    var options = {
+      /*
+        HTML Selector. You can pass value of name, id or class. 
+        It will automatically detect exist elements for you.
+        Example: 'myIdOrClass','#myId', '.myClass', 'myName'
+        */
+        province: 'ls_province',	
+        district: 'ls_district',	
+        ward: 'ls_ward',			
+                  
+        /*
+        Define value for option tag. Valid option: id|name           
+        */
+        getValueBy: 'id',           
+        
+        //Placeholder text
+        provinceText: 'Chọn tỉnh / thành phố',
+        districtText: 'Chọn quận / huyện',
+        districtNoText: 'Địa phương này không có quận / huyện',
+        wardText: 'Chọn phường / xã',
+        wardNoText: 'Địa phương này không có phường / xã',
+        
+        // Default value if no location exist
+        emptyValue: " ",
+        
+        // Hide option where no local exist
+        hideEmptyValueOption: true,
+        
+        // Hide place-holder option (first option)
+        hidePlaceHolderOption: true,
+        
+        /*
+        Include local level on option text as prefix
+        Example: true = Quận Bình Thạnh | false = Bình Thạnh
+        */
+        provincePrefix: false,
+        districtPrefix: true,
+        wardPrefix: true,
+        
+        /*
+        Include local level in option tag's attribute
+        */
+        levelAsAttribute: true,
+        levelAttributeName: "data-level",
+};
+
+
+
+
+</script>
+
+
+        
+</body>
+
+</html>

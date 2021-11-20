@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Title -->
+<title>Products | Graindashboard UI Kit</title>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="dashboard/img/favicon.ico">
+
+<!-- Template -->
+<link rel="stylesheet"
+	href="dashboard/graindashboard/css/graindashboard.css">
+<<<<<<< HEAD
+<style type="text/css">
+#them {
+=======
+	<style type="text/css">
+	#them {
+>>>>>>> c3589e0450f04fd804ad4b79949659e00e2117fe
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	border-radius: 3px;
+	font-size: 18px;
+	background-color: white;
+	color: black;
+	border: 2px solid #265df1;
+	margin-left: 5px;
+}
+
+#them:hover {
+	background-color: #265df1;
+	color: white;
+<<<<<<< HEAD
+}
+</style>
+=======
+}</style>
+>>>>>>> c3589e0450f04fd804ad4b79949659e00e2117fe
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+	<!-- Header -->
+	<header class="header bg-body">
+		<nav class="navbar flex-nowrap p-0">
+			<div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+				<!-- Logo For Mobile View -->
+				<a class="navbar-brand navbar-brand-mobile" href="/"> <img
+					class="img-fluid w-100" src="dashboard/img/logo-mini.png"
+					alt="Graindashboard">
+				</a>
+				<!-- End Logo For Mobile View -->
+
+				<!-- Logo For Desktop View -->
+				<a class="navbar-brand navbar-brand-desktop" href="/"> <img
+					class="side-nav-show-on-closed" src="dashboard/img/logo-mini.png"
+					alt="Graindashboard" style="width: auto; height: 33px;"> <img
+					class="side-nav-hide-on-closed" src="dashboard/img/logo.png"
+					alt="Graindashboard" style="width: auto; height: 33px;">
+				</a>
+				<!-- End Logo For Desktop View -->
+			</div>
+
+			<div class="header-content col px-md-3">
+				<div class="d-flex align-items-center">
+					<!-- Side Nav Toggle -->
+					<a class="js-side-nav header-invoker d-flex mr-md-2" href="#"
+						data-close-invoker="#sidebarClose" data-target="#sidebar"
+						data-target-wrapper="body"> <i class="gd-align-left"></i>
+					</a>
+					<!-- End Side Nav Toggle -->
+
+					<!-- User Notifications -->
+					<div class="dropdown ml-auto">
+						<a id="notificationsInvoker" class="header-invoker" href="#"
+							aria-controls="notifications" aria-haspopup="true"
+							aria-expanded="false" data-unfold-event="click"
+							data-unfold-target="#notifications"
+							data-unfold-type="css-animation" data-unfold-duration="300"
+							data-unfold-animation-in="fadeIn"
+							data-unfold-animation-out="fadeOut"> <span
+							class="indicator indicator-bordered indicator-top-right indicator-primary rounded-circle"></span>
+							<i class="gd-bell"></i>
+						</a>
+
+						<div id="notifications"
+							class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem unfold-css-animation unfold-hidden"
+							aria-labelledby="notificationsInvoker"
+							style="animation-duration: 300ms;">
+							<div class="card">
+								<div
+									class="card-header d-flex align-items-center border-bottom py-3">
+									<h5 class="mb-0">Notifications</h5>
+									<a class="link small ml-auto" href="#">Clear All</a>
+								</div>
+
+								<div class="card-body p-0">
+									<div class="list-group list-group-flush">
+										<div class="list-group-item list-group-item-action">
+											<div class="d-flex align-items-center text-nowrap mb-2">
+												<i class="gd-info-alt icon-text text-primary mr-2"></i>
+												<h6 class="font-weight-semi-bold mb-0">New Update</h6>
+												<span class="list-group-item-date text-muted ml-auto">just
+													now</span>
+											</div>
+											<p class="mb-0">
+												Order <strong>#10000</strong> has been updated.
+											</p>
+											<a class="list-group-item-closer text-muted" href="#"><i
+												class="gd-close"></i></a>
+										</div>
+										<div class="list-group-item list-group-item-action">
+											<div class="d-flex align-items-center text-nowrap mb-2">
+												<i class="gd-info-alt icon-text text-primary mr-2"></i>
+												<h6 class="font-weight-semi-bold mb-0">New Update</h6>
+												<span class="list-group-item-date text-muted ml-auto">just
+													now</span>
+											</div>
+											<p class="mb-0">
+												Order <strong>#10001</strong> has been updated.
+											</p>
+											<a class="list-group-item-closer text-muted" href="#"><i
+												class="gd-close"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End User Notifications -->
+					<!-- User Avatar -->
+					<div class="dropdown mx-3 dropdown ml-2">
+						<a id="profileMenuInvoker" class="header-complex-invoker" href="#"
+							aria-controls="profileMenu" aria-haspopup="true"
+							aria-expanded="false" data-unfold-event="click"
+							data-unfold-target="#profileMenu"
+							data-unfold-type="css-animation" data-unfold-duration="300"
+							data-unfold-animation-in="fadeIn"
+							data-unfold-animation-out="fadeOut"> <!--img class="avatar rounded-circle mr-md-2" src="#" alt="John Doe"-->
+							<span class="mr-md-2 avatar-placeholder">J</span> <span
+							class="d-none d-md-block">John Doe</span> <i
+							class="gd-angle-down d-none d-md-block ml-2"></i>
+						</a>
+
+						<ul id="profileMenu"
+							class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4 unfold-css-animation unfold-hidden fadeOut"
+							aria-labelledby="profileMenuInvoker"
+							style="animation-duration: 300ms;">
+							<li class="unfold-item"><a
+								class="unfold-link d-flex align-items-center text-nowrap"
+								href="#"> <span class="unfold-item-icon mr-3"> <i
+										class="gd-user"></i>
+								</span> My Profile
+							</a></li>
+							<li class="unfold-item unfold-item-has-divider"><a
+								class="unfold-link d-flex align-items-center text-nowrap"
+								href="#"> <span class="unfold-item-icon mr-3"> <i
+										class="gd-power-off"></i>
+								</span> Sign Out
+							</a></li>
+						</ul>
+					</div>
+					<!-- End User Avatar -->
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End Header -->
+
+	<main class="main">
+		<!-- Sidebar Nav -->
+		<aside id="sidebar" class="js-custom-scroll side-nav">
+			<ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+				<!-- Title -->
+				<li class="sidebar-heading h6">Dashboard</li>
+				<!-- End Title -->
+
+				<!-- Dashboard -->
+				<li class="side-nav-menu-item"><a
+					class="side-nav-menu-link media align-items-center" href="/"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i
+							class="gd-dashboard"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Dashboard</span>
+				</a></li>
+				<!-- End Dashboard -->
+
+				<!-- Documentation -->
+				<li class="side-nav-menu-item"><a
+					class="side-nav-menu-link media align-items-center" href="#"
+					target="_blank"> <span class="side-nav-menu-icon d-flex mr-3">
+							<i class="gd-file"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Documentation</span>
+				</a></li>
+				<!-- End Documentation -->
+
+				<!-- Title -->
+				<li class="sidebar-heading h6">Examples</li>
+				<!-- End Title -->
+
+				<!-- Users -->
+				<li class="side-nav-menu-item side-nav-has-menu active"><a
+					class="side-nav-menu-link media align-items-center" href="#"
+					data-target="#subUsers"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i class="gd-user"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Users</span> <span
+						class="side-nav-control-icon d-flex"> <i
+							class="gd-angle-right side-nav-fadeout-on-closed"></i>
+					</span> <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+				</a> <!-- Users: subUsers -->
+					<ul id="subUsers"
+						class="side-nav-menu side-nav-menu-second-level mb-0">
+						<li class="side-nav-menu-item "><a class="side-nav-menu-link"
+							href="khachhang.html">Khách hàng</a></li>
+						<li class="side-nav-menu-item active"><a
+							class="side-nav-menu-link" href="nhanvien.html">Nhân Viên</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="chucvu.html">Chức vụ</a></li>
+						<li class="side-nav-menu-item "><a class="side-nav-menu-link"
+							href="user.html">User</a></li>
+					</ul> <!-- End Users: subUsers --></li>
+				<!-- End Users -->
+
+				<!-- Products -->
+
+				<li class="side-nav-menu-item side-nav-has-menu "><a
+					class="side-nav-menu-link media align-items-center" href="#"
+					data-target="#subProducts"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i
+							class="gd-package"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Sản
+							phẩm</span> <span class="side-nav-control-icon d-flex"> <i
+							class="gd-angle-right side-nav-fadeout-on-closed"></i>
+					</span> <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+				</a> <!-- Products: subProducts -->
+					<ul id="subProducts"
+						class="side-nav-menu side-nav-menu-second-level mb-0">
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="products.html">Sản Phẩm</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="categories.html">Loại sản phẩm</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="mausac.html">Màu sắc</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="hoadon.html">Hóa đơn</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="cthoadon.html">Chi tiết hóa đơn</a></li>
+					</ul> <!-- End Products: subProducts --></li>
+
+				<!-- End Products -->
+				<!-- category -->
+				<li class="side-nav-menu-item side-nav-has-menu "><a
+					class="side-nav-menu-link media align-items-center" href="#"
+					data-target="#subCategory"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i class="gd-list"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Phân
+							phối</span> <span class="side-nav-control-icon d-flex"> <i
+							class="gd-angle-right side-nav-fadeout-on-closed"></i>
+					</span> <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+				</a> <!-- category: subcategory -->
+					<ul id="subCategory"
+						class="side-nav-menu side-nav-menu-second-level mb-0">
+
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="nhacungcap.html">Nhà cung cấp</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="nhasanxuat.html">Nhà sản xuất</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="thuonghieu.html">Thương hiệu</a></li>
+					</ul> <!-- End category: subCategory --> <!-- End category: subCategory -->
+				</li>
+				<!-- End category -->
+
+				<!-- Authentication -->
+				<li class="side-nav-menu-item side-nav-has-menu"><a
+					class="side-nav-menu-link media align-items-center" href="#"
+					data-target="#subPages"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i class="gd-lock"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Authentication</span>
+						<span class="side-nav-control-icon d-flex"> <i
+							class="gd-angle-right side-nav-fadeout-on-closed"></i>
+					</span> <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+				</a> <!-- Pages: subPages -->
+					<ul id="subPages"
+						class="side-nav-menu side-nav-menu-second-level mb-0">
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="login.html">Login</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="register.html">Register</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="password-reset.html">Forgot Password</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="password-reset-2.html">Forgot Password 2</a></li>
+						<li class="side-nav-menu-item"><a class="side-nav-menu-link"
+							href="email-verification.html">Email Verification</a></li>
+					</ul> <!-- End Pages: subPages --></li>
+				<!-- End Authentication -->
+
+				<!-- Settings -->
+				<li class="side-nav-menu-item"><a
+					class="side-nav-menu-link media align-items-center"
+					href="settings.html"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i
+							class="gd-settings"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Settings</span>
+				</a></li>
+				<!-- End Settings -->
+
+				<!-- Static -->
+				<li class="side-nav-menu-item"><a
+					class="side-nav-menu-link media align-items-center"
+					href="static-non-auth.html"> <span
+						class="side-nav-menu-icon d-flex mr-3"> <i class="gd-file"></i>
+					</span> <span class="side-nav-fadeout-on-closed media-body">Static
+							page</span>
+				</a></li>
+				<!-- End Static -->
+
+			</ul>
+		</aside>
+		<!-- End Sidebar Nav -->
+
+		<div class="content">
+			<div class="py-4 px-3 px-md-4">
+				<div class="card mb-3 mb-md-4">
+
+					<div class="card-body">
+						<!-- Breadcrumb -->
+						<nav class="d-none d-md-block" aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">User</a></li>
+								<li class="breadcrumb-item active" aria-current="page">
+									Nhân viên</li>
+							</ol>
+						</nav>
+						<!-- End Breadcrumb -->
+
+						<div class="mb-3 mb-md-4 d-flex justify-content-between">
+							<div class="h3 mb-0">Nhân viên</div>
+						</div>
+<<<<<<< HEAD
+						<div>
+							<form id="searchForm">
+								Tên : <input name="ten" type="text"> <input
+									type="hidden" name="trang" value="0"> <select
+									id="sort-item" name="xepTheo">
+									<option value="diaChi">Lọc Địa chỉ</option>
+									<option value="tenNV">Lọc Tên</option>
+									<option value="gmail">Lọc Gmail</option>
+								</select> <select id="sort-item" name="thuTu">
+									<option value="true">Tăng dần</option>
+									<option value="false">Giảm dần</option>
+								</select>
+
+								<button class="button" type="button" id="searchBt">Tìm
+									kiếm</button>
+							</form>
+						</div>
+=======
+
+>>>>>>> c3589e0450f04fd804ad4b79949659e00e2117fe
+						<button id="them">
+							<b>+ Thêm</b>
+						</button>
+						<!-- Users -->
+						<div class="table-responsive-xl">
+							<table class="table table-striped  table-sm" id="table">
+								<thead>
+									<tr>
+										<th class="font-weight-semi-bold border-top-0 py-2">Tên
+											nhân viên</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Giới
+											Tính</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Chức
+											vụ</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Lương</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Địa
+											chỉ</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Số
+											điện thoại</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Gmail</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Tình
+											trạng</th>
+										<th class="font-weight-semi-bold border-top-0 py-2">Sửa
+											Xóa</th>
+
+									</tr>
+								</thead>
+								<tbody id="myTable">
+
+								</tbody>
+							</table>
+<<<<<<< HEAD
+							<div style="float: right;"
+								class="page-item card-footer d-block d-md-flex align-items-center d-print-none"
+								id="phanTrang"></div>
+=======
+							
+>>>>>>> c3589e0450f04fd804ad4b79949659e00e2117fe
+						</div>
+					</div>
+					<!-- End Users -->
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							<b>Nhân viên</b>
+						</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="editForm"></form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" action="" id="save">Save
+							changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="small p-3 px-md-4 mt-auto">
+			<div class="row justify-content-between">
+				<div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+					<ul class="list-dot list-inline mb-0">
+						<li
+							class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a
+							class="link-dark" href="#">FAQ</a></li>
+						<li class="list-dot-item list-inline-item mr-lg-2"><a
+							class="link-dark" href="#">Support</a></li>
+						<li class="list-dot-item list-inline-item mr-lg-2"><a
+							class="link-dark" href="#">Contact us</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg text-center mb-3 mb-lg-0">
+					<ul class="list-inline mb-0">
+						<li class="list-inline-item mx-2"><a class="link-muted"
+							href="#"><i class="gd-twitter-alt"></i></a></li>
+						<li class="list-inline-item mx-2"><a class="link-muted"
+							href="#"><i class="gd-facebook"></i></a></li>
+						<li class="list-inline-item mx-2"><a class="link-muted"
+							href="#"><i class="gd-github"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg text-center text-lg-right">&copy; 2019
+					Graindashboard. All Rights Reserved.</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+		</div>
+	</main>
+	<script
+		src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/form-data-json-convert/dist/form-data-json.min.js"></script>
+
+
+	<script type="text/javascript">
+	var url = "/api/nhanviens";
+		var rowTemplate = "{{#each nhanviens}}"
+			+"<tr>"
+			+       '<td>{{tenNV}}</td>'
+			+       '<td>{{gioiTinh}}</td>'
+			+       '<td>{{chucvu.chucVu}}</td>'
+			+       '<td>{{luong}}</td>'
+			+       '<td>{{diaChi}}</td>'
+			+       '<td>{{sdt}}</td>'
+			+       '<td>{{gmail}}</td>'
+			+       '<td>{{tinhTrang}}</td>'
+			+       '<td class="py-3"><button class="edit" c-id="{{idNV}}"> <img class="icon-item" src="dashboard/img/iconfix.png" alt=""></button>'
+			+ 		'<button class="delete" c-id="{{idNV}}"><img class="icon-item"  src="dashboard/img/iconremove.png" alt=""></button></td>'
+			
+			+"</tr>"
+		+"{{/each}}";
+		var rowHbs = Handlebars.compile(rowTemplate);
+	
+		 var chucvuSelect =
+		        '<select  id="chucvuSelect" name="idCV">{{#each chucvus}}' +
+		        '<option value="{{idCV}}">' +
+		        "{{chucVu}}" +
+		        "</option>" +
+		        "{{/each}}</select>";
+
+		 var chucvuSelectHbs = Handlebars.compile(chucvuSelect); 
+		 
+		  
+		 function loadList() {
+				
+				var searchForm = FormDataJson.toJson(document.querySelector("form"));
+				var searchOption = {
+			        method: 'POST',
+			        headers: {
+			            'Content-Type': 'application/json'
+		          	},
+			        body: JSON.stringify(searchForm)
+				};
+				
+				
+				fetch("/api/nhanviens/search", searchOption).then(res => res.json())
+					.then(data => {
+						var rows = rowHbs({ nhanviens: data.content });
+						$("#myTable").html(rows);
+						bindEvent();
+						bindClick();
+						var pageHtml = "";
+						for (var i = 0; i < data.totalPages; i++) {
+							pageHtml += `<button value="${i}" class="page-link pageIndex">${i+1}</button>`;
+						}
+						$("#phanTrang").html(pageHtml);
+						
+						$(".pageIndex").click(function() {
+							$('#searchForm input[name="trang"]').val($(this).val());
+							loadList();
+						});
+					});
+			}
+			loadList();
+			
+			$("#searchBt").click(function() {
+				loadList();
+			});
+		
+	 function bindEvent() {
+			$(".delete").click(function() {
+				deleteNhanvien($(this));
+			});
+		} 
+		
+		var insertModal = new bootstrap.Modal(document.getElementById('editModal'), {
+			  keyboard: false
+			});
+		$("#them").click(function() {
+			insertModal.show();
+			fetch("/api/chucvus")
+			  .then(response => response.json())
+			  .then(data => {
+				  var chucvuSelectHtml = chucvuSelectHbs({ chucvus: data });
+				  
+				 
+			var insertForm = '<div class="mb-3">'
+	               +	'<label for="tenNV" class="form-label"><b>Tên nhân viên:</b></label>'
+	  			   +	'<input name="tenNV" value="" class="form-control" id="tenNV" placeholder="Tên nhân viên">'
+	  			   +   '</div>';
+	  			   
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="gioiTinh" class="form-label"><b>Giới tính:</b></label>'
+		  		   +	'<input name="gioiTinh" value="" class="form-control" id="gioiTinh" placeholder="Giới tính">'
+				   +   '</div>';
+	  			
+				   insertForm += '<div class="mb-3">'
+		  			   +	'<label for="" class="form-label"><b>Chức Vụ:</b></label>'
+		  			   +	chucvuSelectHtml;
+				
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="luong" class="form-label"><b>Lương:</b></label>'
+	  			   +	'<input name="luong" value="" class="form-control" id="luong" placeholder="Lương">'
+	  			   +   '</div>';
+	  			 
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="diaChi" class="form-label"><b>Địa chỉ:</b></label>'
+	  			   +	'<input name="diaChi" value="" class="form-control" id="diaChi" placeholder="Địa chỉ">'
+	  			   +   '</div>';
+	  			 
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="sdt" class="form-label"><b>Số điện thoại:</b></label>'
+	  			   +	'<input name="sdt" value="" class="form-control" id="sdt" placeholder="Số điện thoại">'
+	  			   +   '</div>';
+	  			 
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="gmail" class="form-label"><b>Gmail:</b></label>'
+	  			   +	'<input name="gmail" value="" class="form-control" id="gmail" placeholder="Gmail">'
+	  			   +   '</div>';
+	  			 
+	  			insertForm += '<div class="mb-3">'
+	  			   +	'<label for="tinhTrang" class="form-label"><b>Tình Trạng:</b></label>'
+	  			   +	'<input name="tinhTrang" value="" class="form-control" id="tinhTrang" placeholder="Tình Trạng">'
+				   +   '</div>';
+			$("#editForm").html(insertForm);
+			  
+			});
+		});
+		
+		$("#save").click(function() {
+			var nhanvien = FormDataJson.toJson(document.querySelector("#editModal"));
+			nhanvien.chucvu = {
+					idCV: nhanvien.idCV
+                }
+			 nhanvien.user = {
+					idUser: nhanvien.idUser
+                } 
+			var editOption = {
+		        method: 'POST',
+		        headers: {
+		            'Content-Type': 'application/json'
+	          	},
+		        body: JSON.stringify(nhanvien)
+			};
+			nhanvien = fetch(url, editOption)
+					.then(response => response.json())
+					.then(data => {
+						console.log(data);
+						loadList();
+					});
+			insertModal.hide();
+		});
+		
+		// thực hiện delete
+		function deleteNhanvien($button) {
+	    var id = $button.attr("c-id");
+	    alert("id saa pham la" + id)
+	    var deleteOption = {
+	        method: 'delete',
+	        headers: {
+	            'Content-Type': 'application/json'
+	        }
+	    };
+	    nhanviens = fetch(url + "/" + id, deleteOption)
+	        .then(response => {
+	            loadList();
+	        });
+
+	}
+		var editTemplateStr = '<input type="hidden" name="idNV" id-cate = "idNV" value = "{{idNV}}">' +
+        '<div class="mb-3">' +
+        '<label for="tenNV" class="form-label"><b>Tên nhân viên:</b></label>' +
+        '<input name="tenNV" value="{{tenNV}}" class="form-control" id="tenNV" placeholder="Tên nhân viên">' +
+        
+        '<label for="gioiTinh" class="form-label"><b>Giới tính:</b></label>' +
+        '<input name="gioiTinh" value="{{gioiTinh}}" class="form-control" id="gioiTinh" placeholder="Giới tính">' +
+        
+        '<label for="luong" class="form-label"><b>Lương</b></label>' +
+        '<input name="luong" value="{{luong}}" class="form-control" id="luong" placeholder="Lương">' +
+        
+        '<label for="diaChi" class="form-label"><b>Địa chỉ:</b></label>' +
+        '<input name="diaChi" value="{{diaChi}}" class="form-control" id="diaChi" placeholder="Địa chỉ">' +
+        
+        '<label for="sdt" class="form-label"><b>Số điện thoại:</b></label>' +
+        '<input name="sdt" value="{{sdt}}" class="form-control" id="sdt" placeholder="Số điện thoại">' +
+        
+        '<label for="gmail" class="form-label"><b>Gmail:</b></label>' +
+        '<input name="gmail" value="{{gmail}}" class="form-control" id="gmail" placeholder="Gmail">' +
+        
+        '<label for="tinhTrang" class="form-label"><b>Tình trạng:</b></label>' +
+        '<input name="tinhTrang" value="{{tinhTrang}}" class="form-control" id="tinhTrang" placeholder="Tình trạng">' +
+        '</div>';
+        var editHbs = Handlebars.compile(editTemplateStr);
+    	function bindClick() {
+    	    $(".edit").click(function() {
+    	        insertModal.show();
+
+    	        var id = $(this).attr("c-id");
+    	        fetch(url + "/" + id)
+
+    	        .then((res) => res.json())
+    	            .then((nhanviens) => {
+    	                var editHTML = editHbs(nhanviens);
+    	                
+   //fetch nhà cùng cấp
+    	                         fetch("/api/chucvus")
+        	                    .then((res) => res.json())
+        	                    .then((chucvus) => {
+        	                        var chucvuSelectHtml = chucvuSelectHbs({
+        	                        	chucvus: chucvus,
+        	                        });
+        	                        editHTML += chucvuSelectHtml;
+
+        	                        $("#editForm").html(editHTML);
+        	                        $("#chucvuSelect").val(chucvus.idCV)
+    	                    }); 
+    	                	
+    	            });
+    	    });
+    	
+        }
+	</script>
+	<script src="dashboard/graindashboard/js/graindashboard.js"></script>
+	<script src="dashboard/graindashboard/js/graindashboard.vendor.js"></script>
+
+</body>
+</html>

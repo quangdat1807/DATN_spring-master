@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="/asset/dashboard/js/tkThangTong.js"></script>
+ <!--<script type="text/javascript" src="admin/tkTheoThang.js"></script> -->
+</head>
+<body>
+	<div class="ChooseDate Form_TKByMonth mt-3">
+		<p id="message"></p>
+		<div class="input-group cbbChooseYear mb-3">
+			<div class="input-group-append ">
+				<span class="textChonNgay"> NĂM </span> <select
+					class="custom-select" name="year" id="year">
+					
+				</select>
+			</div>
+
+			<div class="input-group-append  ml-4">
+				<span> Tổng tiền nhập : <strong
+					id="tiennhap"></strong>
+				</span>
+				<span> Tổng tiền xuất: <strong
+					id="tienxuat"></strong>
+				</span>
+				<span> Lãi: <strong
+					id="lai"></strong>
+				</span>
+			</div>
+		</div>
+		<div id="container" style="height: 400px">
+				<figure class="highcharts-figure">
+					<div id="container"></div>
+					<p class="highcharts-description"></p>
+				</figure>
+			</div>
+
+		<div id="chartContainer"></div>
+	</div>
+	<script type="text/javascript">
+	var currentYear = new Date().getFullYear();
+	var year = currentYear +1;
+	var yearOso = 2018;
+
+	var y = 1;
+
+
+	loadYear(currentYear, yearOso );
+
+	function loadYear(currentYear, yearOso ) {
+		for (i = year; i > yearOso; i--) {
+			year =  year -  y;
+			$('#year').append('<option value="' + year + '">' + year + '</option>');
+			console.log(currentYear);
+	}
+
+	}
+	</script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	
+</body>
+</html>

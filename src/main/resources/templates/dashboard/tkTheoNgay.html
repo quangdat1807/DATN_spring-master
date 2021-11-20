@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="admin/tkTheoNgay.js"></script>
+</head>
+<body>
+	<div class="ChooseDate Form_TKByDay mt-3">
+		<div class="input-group Block__FilterByDate mb-3">
+			<span class="textChonNgay">NGÀY : </span> <input type="date"
+				class="chonngay" name="dateChoose" id="datePicker"
+				value="">
+
+			<div class="input-group-append">
+				<button class="btn btn__search" type="submit" id="btnThongKe">
+					<i class="fa fa-search"></i> Thống kê
+				</button>
+			</div>
+		</div>
+
+		<P id="msg"></P>
+		<div id="chartContainer" class="mt-4" data-aos="fade-up"></div>
+	</div>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
