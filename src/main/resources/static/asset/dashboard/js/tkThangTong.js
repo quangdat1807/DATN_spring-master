@@ -60,16 +60,16 @@ function RenderChart(nhap, xuat) {
 	var dataNhap = [];
 	var dataXuat = [];
 	var tiennhap = 0;
-	var tienxuat = 0;
-	var thangxuat = [];
+	var tiennhap = 0;
+	var thangnhap = [];
 	for (var i = 0; i < nhap.length; i++) {
 		dataNhap.push((nhap[i][0]));
 		tiennhap = tiennhap + Number(nhap[i][0]);
+		thangnhap.push("Tháng " +nhap[i][1]);
 		console.log("55: " + dataNhap);
 	}
 	for (var y = 0; y < xuat.length; y++) {
 		dataXuat.push((xuat[y][0]));
-		thangxuat.push("Tháng " +xuat[y][1]);
 		tienxuat = tienxuat + Number(xuat[y][0]);
 	}
 	var sum = dataXuat.map(function(num, idx) {
@@ -88,7 +88,7 @@ function RenderChart(nhap, xuat) {
 			text: "THỐNG KÊ DOANH THU THEO TỪNG THÁNG (NĂM " + $('#year').val()+ ")",
 		},
 		xAxis: {
-			categories: thangxuat
+			categories: thangnhap
 		},
 		yAxis: [{ // Primary yAxis,
 			title: {

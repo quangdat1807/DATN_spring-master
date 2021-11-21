@@ -6,6 +6,8 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Table(name = "hoadon")
@@ -17,7 +19,8 @@ public class HoaDon {
 	int idhoadon;
 	double tongtien;
 	private Date ngaytao = new Date((new java.util.Date()).getTime());
-	
+	@ManyToOne
+	private TinhTrang tinhtrang;
 	
 	
 	@Override

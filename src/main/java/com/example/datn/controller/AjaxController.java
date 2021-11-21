@@ -44,7 +44,7 @@ public class AjaxController {
 		Session session = factory.getCurrentSession();
 		List<Object[]> thongketheongay = session
 				.createQuery("SELECT sum(tongtien), (SELECT sum(tongtien)  FROM HoaDon where ngaytao = '" + date
-						+ "')  " + "FROM HoaDon hd where extract (month from hd.ngaytao) = '" + month + "' "
+						+ "' and tinhtrang_id != 4)  " + "FROM HoaDon hd where extract (month from hd.ngaytao) = '" + month + "' "
 						+ "and extract (year from hd.ngaytao) = '" + year + "' ")
 				.list();
 
@@ -67,7 +67,7 @@ public class AjaxController {
 		String monthOfdateChoose = dateChoose.substring(5, 7);
 		List<Object[]> thongketheongay = session
 				.createQuery("SELECT sum(tongtien), (SELECT sum(tongtien)  FROM HoaDon where ngaytao = '" + dateChoose
-						+ "')  " + "FROM HoaDon hd where extract (month from hd.ngaytao) = '" + monthOfdateChoose + "'"
+						+ "' and tinhtrang_id != 4)  " + "FROM HoaDon hd where extract (month from hd.ngaytao) = '" + monthOfdateChoose + "'"
 						+ "and extract (year from hd.ngaytao) = '" + yearOfdateChoose + "' ")
 				.list();
 
@@ -87,7 +87,7 @@ public class AjaxController {
 		Session session = factory.getCurrentSession();
 		List<Object[]> data = session.createQuery(
 				"SELECT sum(hd.tongtien), extract(month from ngaytao) FROM HoaDon  hd where EXTRACT (year from hd.ngaytao)  = '"
-						+ year + "'  group by EXTRACT (month from hd.ngaytao) order by EXTRACT (month from hd.ngaytao)")
+						+ year + "' and tinhtrang_id != 4 group by EXTRACT (month from hd.ngaytao) order by EXTRACT (month from hd.ngaytao)")
 				.list();
 		Gson gson = new Gson();
 		response.setContentType("application/json;charset=UTF-8");
@@ -104,7 +104,7 @@ public class AjaxController {
 		String year = request.getParameter("year");
 		List<Object[]> data = session.createQuery(
 				"SELECT sum(hd.tongtien), extract(month from ngaytao) FROM HoaDon  hd where EXTRACT (year from hd.ngaytao)  = '"
-						+ year + "'  group by EXTRACT (month from hd.ngaytao) order by EXTRACT (month from hd.ngaytao)")
+						+ year + "' and tinhtrang_id != 04 group by EXTRACT (month from hd.ngaytao) order by EXTRACT (month from hd.ngaytao)")
 				.list();
 		Gson gson = new Gson();
 		response.setContentType("application/json;charset=UTF-8");
