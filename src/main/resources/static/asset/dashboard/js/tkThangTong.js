@@ -60,22 +60,23 @@ function RenderChart(nhap, xuat) {
 	var dataNhap = [];
 	var dataXuat = [];
 	var tiennhap = 0;
-	var tiennhap = 0;
+	var tienxuat = 0;
 	var thangnhap = [];
 	for (var i = 0; i < nhap.length; i++) {
 		dataNhap.push((nhap[i][0]));
 		tiennhap = tiennhap + Number(nhap[i][0]);
 		thangnhap.push("Tháng " +nhap[i][1]);
-		console.log("55: " + dataNhap);
+		console.log("Nhập: " + dataNhap);
 	}
 	for (var y = 0; y < xuat.length; y++) {
 		dataXuat.push((xuat[y][0]));
 		tienxuat = tienxuat + Number(xuat[y][0]);
+		console.log("Xuất: " + dataXuat);
 	}
 	var sum = dataXuat.map(function(num, idx) {
 		return num - dataNhap[idx];
 
-	}); console.log("2222", sum);
+	}); console.log("Tổng", sum);
 	var tongTien = tienxuat - tiennhap;
 	console.log("3", nhap)
 	$('#tiennhap').text(Number(tiennhap).toLocaleString('vi-VN') + " VNĐ");
